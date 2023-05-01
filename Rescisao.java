@@ -18,8 +18,14 @@ public class Rescisao {
 	public Rescisao(float totalProventos) {
 	this.totalProventos=totalProventos;
 	}
-	
-	
+
+	public Rescisao() {
+
+	}
+
+
+
+
 	public float getTotalProventos() {
 		return totalProventos;
 	}

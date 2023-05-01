@@ -29,22 +29,25 @@ public class Main {
 		System.out.println("Quando você saiu do trabalho ? digite no formato [ DD/MM/AAAA ]");
 		sFimTrabalho = leia.nextLine();
 		LocalDate fimTrabalho = LocalDate.parse(sFimTrabalho, formatter);
-		
+
 		System.out.println("digite seu ultimo salario: ");
 		salario = leia.nextFloat();
 
 		Rescisao resc = new Rescisao(nome, inicioTrabalho, fimTrabalho, salario);
-		
-		float totalProventos = saldoSalario +  ferias +  decimoTerceiro;;
-		Rescisao calculoProvento = new Rescisao(totalProventos );
+
+
+		Proventos prov = new Proventos();
+
+		System.out.println(prov.calculototalProventos());
+
+		//float totalProventos = saldoSalario +  ferias +  decimoTerceiro;;
+		//Rescisao calculoProvento = new Rescisao(totalProventos );
 
 		//System.out.println(resc.diasTrabalhados(fimTrabalho));
 		//System.out.println(resc.diasDoMes(fimTrabalho));
-		
-		System.out.println(calculototalProventos);
-		
-		
-		
+
+
+
 
 	}
 

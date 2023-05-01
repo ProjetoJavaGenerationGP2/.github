@@ -1,7 +1,7 @@
 package CalculadoraTrabalhista;
 
 public class Proventos extends Rescisao {
-	float saldoSalario, ferias, decimoTerceiro,totalProventos=0;
+	float saldoSalario, ferias, decimoTerceiro,totalProventos;
 
 	public Proventos(int diasTrabalhados, int diasDoMes, int feirasVencidas, float salario, float saldoSalario,
 			float ferias, float decimoTerceiro) {
@@ -18,11 +18,13 @@ public class Proventos extends Rescisao {
 		this.decimoTerceiro = decimoTerceiro;
 		// TODO Auto-generated constructor stub
 	}
-	
-
 	public Proventos(float totalProventos, float totalProventos2) {
 		super(totalProventos);
 		totalProventos = totalProventos2;
+	}
+
+	public Proventos() {
+		super();
 	}
 
 	public float getTotalProventos() {
@@ -58,7 +60,7 @@ public class Proventos extends Rescisao {
 	}
 
 	public float calculoSaldoSalario() {
-		saldoSalario = diasTrabalhados * (salario / diasDoMes);
+		saldoSalario = diasTrabalhados * (getSalario() / diasDoMes);
 		return saldoSalario;
 	}
 
@@ -72,10 +74,9 @@ public class Proventos extends Rescisao {
 		return decimoTerceiro;
 	}
 	
-	public void calculototalProventos() {
-		float totalProventos = saldoSalario +  ferias +  decimoTerceiro;
-		
-		
+	public float calculototalProventos() {
+		float totalProventos = getSaldoSalario() +  getFerias() +  getDecimoTerceiro();
+		return totalProventos;
 	}
 
 }
