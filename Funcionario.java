@@ -5,17 +5,35 @@ import java.time.temporal.ChronoUnit;
 
 public class Funcionario {
 	private String nome;
-	private String cpf;
 	private double salario;
-	private LocalDate dataAdmissao,dataDemissao;
+	private LocalDate dataAdmissao, dataDemissao;
 
-	public Funcionario(String nome, String cpf, double salario, LocalDate dataAdmissao) {
+	
+
+	public Funcionario(String nome, double salario, LocalDate dataAdmissao, LocalDate dataDemissao) {
 		this.nome = nome;
-		this.cpf = cpf;
 		this.salario = salario;
 		this.dataAdmissao = dataAdmissao;
-		
+		this.dataDemissao = dataDemissao;
 	}
+	
+	
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+
+
+
+
+
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+
+
 
 	public LocalDate getDataDemissao() {
 		return dataDemissao;
@@ -33,9 +51,7 @@ public class Funcionario {
 		return nome;
 	}
 
-	public String getCpf() {
-		return cpf;
-	}
+
 
 	public double getSalario() {
 		return salario;
@@ -46,8 +62,7 @@ public class Funcionario {
 	}
 
 	public double calcularRescisao() {
-		LocalDate dataRescisao = LocalDate.now();
-		long mesesTrabalhados = ChronoUnit.MONTHS.between(dataAdmissao, dataRescisao);
+		long mesesTrabalhados = ChronoUnit.MONTHS.between(dataAdmissao, dataDemissao);
 		double ferias = salario / 12 * mesesTrabalhados;
 		double decimoTerceiro = salario / 12 * mesesTrabalhados;
 		double multa = salario * 0.4;

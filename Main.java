@@ -9,6 +9,7 @@ public class Main {
 	public static void main(String[] args) {
 
 		Scanner leia = new Scanner(System.in);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 		System.out.println("Digite o nome do funcionário: ");
 		String nome = leia.nextLine();
@@ -28,10 +29,13 @@ public class Main {
 			System.out.println("Digite o cargo do funcionário: ");
 			String cargo = leia.nextLine();
 
-			System.out.println("Digite a data de admissão do funcionário (no formato AAAA-MM-DD): ");
-			LocalDate dataAdmissao = LocalDate.parse(leia.nextLine());
+			System.out.println("Digite a data de admissão do funcionário (no formato dd/MM/yyyy): ");
+			LocalDate dataAdmissao = LocalDate.parse(leia.nextLine(), formatter);
 
-			FuncionarioCLT funcionario = new FuncionarioCLT(nome, cpf, salario, dataAdmissao, cargo);
+			System.out.println("Digite a data de demissão do funcionário (no formato dd/MM/yyyy): ");
+			LocalDate dataDemissao = LocalDate.parse(leia.nextLine(), formatter);
+
+			FuncionarioCLT funcionario = new FuncionarioCLT(nome, salario, dataAdmissao, dataDemissao, cpf);
 			double rescisao = funcionario.calcularRescisao();
 
 			System.out.println("Rescisão de " + funcionario.getNome() + ": R$" + rescisao);
@@ -44,13 +48,17 @@ public class Main {
 
 			leia.nextLine();
 
-			System.out.println("Digite a data de início do contrato (no formato AAAA-MM-DD): ");
-			LocalDate dataInicioContrato = LocalDate.parse(leia.nextLine());
+			System.out.println("Digite a data de início do contrato (no formato dd/MM/yyyy): ");
+			LocalDate dataInicioContrato = LocalDate.parse(leia.nextLine(), formatter);
 
-			FuncionarioPJ funcionario = new FuncionarioPJ(nome, cpf, valorTotal, dataInicioContrato, nomeEmpresa);
-			double rescisao = funcionario.calcularRescisao();
+			System.out.println("Digite a data de fim do contrato (no formato dd/MM/yyyy): ");
+			LocalDate dataFimContrato = LocalDate.parse(leia.nextLine(), formatter);
 
-			System.out.printf("Rescisão de " , funcionario.getNome() , ": R$" , rescisao);
+			FuncionarioPJ funcionariopj = new FuncionarioPJ(nome, valorTotal, dataInicioContrato, dataFimContrato,
+					nomeEmpresa);
+			double rescisao = funcionariopj.calcularRescisao();
+
+			System.out.println("Rescisão de " + funcionariopj.getNome() + ": R$" + rescisao);
 		} else {
 			System.out.println("Tipo de contrato inválido!");
 		}

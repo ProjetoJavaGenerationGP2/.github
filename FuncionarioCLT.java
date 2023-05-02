@@ -3,14 +3,20 @@ package RescisaoTrabalhista;
 import java.time.LocalDate;
 
 public class FuncionarioCLT extends Funcionario {
-    private String cargo;
+    private String cpf;
 
-    public FuncionarioCLT(String nome, String cpf, double salario, LocalDate dataAdmissao, String cargo) {
-        super(nome, cpf, salario, dataAdmissao);
-        this.cargo = cargo;
+    public FuncionarioCLT(String nome,  double salario, LocalDate dataAdmissao, LocalDate dataDemissao, String cpf) {
+        super(nome, salario, dataAdmissao, dataDemissao);
+        this.cpf = cpf;
     }
 
-    public String getCargo() {
-        return cargo;
-    }
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+    
+    
 }
