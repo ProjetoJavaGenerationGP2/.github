@@ -7,10 +7,10 @@
 
 <p><a href="https://github.com/DrikaDev" target="_blank">Adriana Gutierrez;</a></p>
 <p><a href="https://github.com/AlessandraMariana" target="_blank">Alessandra Mariana;</a></p>
-<p><a href="https://github.com/lukas-95" target="_blank">Lucas Reck;</a></p>
 <p><a href="https://github.com/Charles-Luchiari" target="_blank">Charles Luchiari;</a></p>
-<p><a href="https://github.com/Samuel123n" target="_blank">Samuel Marques;</a></p>
+<p><a href="https://github.com/lukas-95" target="_blank">Lucas Reck;</a></p>
 <p><a href="https://github.com/MIKEMARQUEZINI" target="_blank">Mike Marquezini;</a></p>
+<p><a href="https://github.com/Samuel123n" target="_blank">Samuel Marques;</a></p>
 
 <h2> Linguagem utilizada: </h2>
 
