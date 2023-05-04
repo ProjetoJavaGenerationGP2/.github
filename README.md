@@ -12,6 +12,15 @@
 <p><a href="https://github.com/MIKEMARQUEZINI" target="_blank">Mike Marquezini;</a></p>
 <p><a href="https://github.com/Samuel123n" target="_blank">Samuel Marques;</a></p>
 
+<h3>Imagens do resultado final</h3>
+
+<img width="368" alt="image" src="https://user-images.githubusercontent.com/102387476/236265976-0db2e102-b446-45eb-8265-fc30db200dbe.png">
+<img width="475" alt="image" src="https://user-images.githubusercontent.com/102387476/236267271-02a8ce93-2ea6-4a1a-8cce-2933092a8396.png">
+<img width="351" alt="image" src="https://user-images.githubusercontent.com/102387476/236267341-7be40c6e-0eb8-4ae6-ad1a-26d5984a8009.png">
+
+<img width="434" alt="image" src="https://user-images.githubusercontent.com/102387476/236267632-afd6a3c4-11df-4698-a006-95387a49dfe3.png">
+<img width="350" alt="image" src="https://user-images.githubusercontent.com/102387476/236267685-1e3571bd-6fca-4db3-98de-c2b105501065.png">
+
 <h2> Linguagem utilizada: </h2>
 
 <table>
